@@ -1,0 +1,72 @@
+.contenedor{
+    background-color: blue;
+    padding: 10px;
+    font-size: 25px;
+    display: grid;
+    grid-gap: 10px;
+    /*grid-template-columns: 150px 150px 250px;
+    grid-template-rows: 150px 250px 100px 50px 20px;
+    */
+    /*grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(3,200px);*/
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 8fr 2fr;
+    grid-template-areas: "header header header"
+                         "side1 contenido side2"
+                         "footer footer footer"
+                        
+    }
+    .contenedor>div{
+        background-color: blueviolet;
+    }
+    .contenedor .header{
+        background-color: brown;
+        /*grid-column: header;*/
+        grid-column-start: header;
+        grid-column-end: header;
+    }
+    .contenedor .side1{
+        background-color: aquamarine;
+        grid-column: side1;
+        padding: 10px;
+        display: grid;
+        grid-gap: 10px;
+    }
+    .contenedor .side1 .abajo{
+        background-color: burlywood;
+    }
+    .contenedor .side1 .arriba{
+        background-color: rgb(226, 131, 6);
+    }
+    .contenedor .contenido{
+        background-color: rgb(255, 255, 0);
+        grid-column: contenido;
+        padding: 5px;
+        display: grid;
+        grid-gap: 10px;
+        
+    }
+    .contenedor .contenido .izq{
+        background-color: crimson;
+        grid-row: contenido;
+        
+
+    }
+    .contenedor .contenido .med{
+        background-color: crimson;
+        grid-row: contenido;
+
+    }
+    .contenedor .contenido .der{
+        background-color: crimson;
+        grid-row: contenido;
+    }
+    .contenedor .side2{
+        background-color: chartreuse;
+        grid-column: side2;
+    }
+    .contenedor .footer{
+        background-color: cornflowerblue;
+        grid-column: footer;
+        text-align: center;
+    }
